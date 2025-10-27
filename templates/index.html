@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NLP Tools for Netflix & Spotify</title>
+</head>
+<body>
+    <h1>NLP Project Dashboard</h1>
+    <form method="POST">
+        <textarea name="text" rows="5" cols="60" placeholder="Enter your text here..." required></textarea><br><br>
+        <label>Select Task:</label><br>
+        <input type="radio" name="task" value="sentiment" required> Sentiment Analysis<br>
+        <input type="radio" name="task" value="summarize"> Summarization<br>
+        <input type="radio" name="task" value="translate"> Translation<br>
+        <input type="radio" name="task" value="chatbot"> Chatbot<br><br>
+        <label>Language (for translation):</label>
+        <input type="text" name="language" placeholder="e.g., es for Spanish"><br><br>
+        <input type="submit" value="Run NLP Task">
+    </form>
+    {% if result %}
+        <h2>Result:</h2>
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
